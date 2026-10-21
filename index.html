@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Портфоліо вчителя початкових класів</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lora:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffaf0;--surface:#fff;--ink:#1f2a44;--muted:#5b6479;--primary:#2a5ea8;--on-primary:#fff;--accent:#f2b705;--line:#e8e1d0;--soft:#f3ecd9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a28;--surface:#1c2438;--ink:#eef1f8;--muted:#a6afc4;--primary:#7ab0ff;--on-primary:#10203d;--accent:#f2c53d;--line:#2c3652;--soft:#222c45}}
+:root[data-theme="dark"]{--bg:#141a28;--surface:#1c2438;--ink:#eef1f8;--muted:#a6afc4;--primary:#7ab0ff;--on-primary:#10203d;--accent:#f2c53d;--line:#2c3652;--soft:#222c45}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Montserrat',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;line-height:1.65;font-size:16px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:10}
+h1,h2,h3{font-family:'Lora',Georgia,'Times New Roman',serif;line-height:1.25;margin:0 0 .5em}
+a{color:var(--primary)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--surface);border-bottom:1px solid var(--line);z-index:20}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:700;letter-spacing:.04em;text-decoration:none;color:var(--ink);font-size:1.05rem}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.86rem;padding:8px 10px;border-radius:8px}
+nav a:hover{background:var(--soft);color:var(--primary)}
+#burger{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;font-size:1.3rem;padding:4px 12px;cursor:pointer}
+@media (max-width:860px){
+#burger{display:block}
+nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 20px 16px}
+nav.open{display:flex}
+}
+.hero{padding:72px 0 64px;background:linear-gradient(135deg,var(--soft),var(--bg))}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:var(--accent);color:#1f2a44;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem)}
+.hero p{color:var(--muted);font-size:1.08rem;max-width:34em}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;background:var(--primary);color:var(--on-primary);text-decoration:none;font-weight:600;padding:12px 24px;border-radius:99px;border:2px solid var(--primary);cursor:pointer;font:inherit;font-weight:600}
+.btn.ghost{background:transparent;color:var(--primary)}
+.photo{aspect-ratio:4/5;border-radius:24px;background:linear-gradient(160deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff;font-size:4rem;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.15)}
+.photo small{font-size:.85rem;font-weight:600;margin-top:8px;opacity:.9;padding:0 20px}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.photo{max-width:300px;aspect-ratio:1}}
+section{padding:72px 0}
+section.alt{background:var(--soft)}
+.title{text-align:center;margin-bottom:40px}
+.title h2{font-size:clamp(1.6rem,4vw,2.2rem);letter-spacing:.02em}
+.title::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--accent);margin:12px auto 0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media (max-width:760px){.about{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card h3{font-size:1.2rem}
+.card p,.card li{color:var(--muted)}
+.card ul{padding-left:20px;margin:0}
+blockquote{margin:0 0 16px;font-family:'Lora',Georgia,serif;font-size:1.25rem;border-left:4px solid var(--accent);padding-left:16px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 8px}
+.stat b{display:block;font-family:'Lora',Georgia,serif;font-size:2rem;color:var(--primary)}
+.stat span{font-size:.82rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+a.tile{text-decoration:none;color:inherit;text-align:center;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .15s,box-shadow .15s}
+a.tile:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+a.tile:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.1)}
+.ico{font-size:2.4rem;display:block;margin-bottom:8px}
+a.tile h3{color:var(--primary);font-size:1.05rem;margin-bottom:6px}
+a.tile p{margin:0;font-size:.9rem}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:760px){.gal{grid-template-columns:repeat(2,1fr)}}
+.g{aspect-ratio:4/3;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-size:2.2rem;text-align:center;padding:8px}
+.g small{font-size:.78rem;font-weight:600;margin-top:4px}
+.g:nth-child(4n+1){background:linear-gradient(135deg,#2a5ea8,#5b8fd9)}
+.g:nth-child(4n+2){background:linear-gradient(135deg,#d99a00,#f2c53d);color:#1f2a44}
+.g:nth-child(4n+3){background:linear-gradient(135deg,#2f8f6b,#6cc3a0)}
+.g:nth-child(4n){background:linear-gradient(135deg,#c4506a,#ec8aa1)}
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);margin:10px 0 0}
+.news time{font-size:.78rem;font-weight:700;color:var(--primary);letter-spacing:.06em;text-transform:uppercase}
+.news h3{margin-top:6px;font-size:1.1rem}
+.news .tile{text-align:left}
+.more{display:block;margin-top:12px;font-size:.85rem;font-weight:600;color:var(--primary)}
+.ban{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;font-size:3.5rem;background:linear-gradient(135deg,var(--primary),var(--accent));margin-bottom:16px}
+.txt p{margin:0 0 12px;font-size:.95rem}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;align-items:start}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+label{display:block;font-size:.85rem;font-weight:600;margin:0 0 4px}
+input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 14px;margin-bottom:14px}
+input:focus,textarea:focus{outline:2px solid var(--primary);outline-offset:1px}
+textarea{min-height:120px;resize:vertical}
+#st{margin:12px 0 0;font-size:.9rem;color:var(--muted)}
+.ov{position:fixed;inset:0;background:rgba(20,26,40,.6);z-index:50;display:flex;align-items:center;justify-content:center;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px))}
+.ov[hidden]{display:none}
+.box{background:var(--surface);color:var(--ink);border-radius:20px;width:min(640px,100%);max-height:100%;overflow:auto;-webkit-overflow-scrolling:touch;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.mh{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:22px 24px 8px}
+.mh h3{margin:0;font-size:1.3rem}
+.x{background:none;border:1px solid var(--line);color:var(--ink);border-radius:50%;width:36px;height:36px;font-size:1.1rem;cursor:pointer;flex:none}
+.md{padding:0 24px 24px}
+.md>p{color:var(--muted);margin:0 0 14px;font-size:.92rem}
+.f{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;padding:12px 0;border-top:1px solid var(--line)}
+.fi{font-size:1.5rem}
+.fn{flex:1 1 50%;font-size:.92rem;font-weight:500}
+.f a{font-size:.82rem;font-weight:600;text-decoration:none;padding:6px 12px;border-radius:99px;border:1px solid var(--primary);white-space:nowrap}
+.f a.dl{background:var(--primary);color:var(--on-primary)}
+footer{background:var(--ink);color:var(--bg);text-align:center;padding:28px 20px;font-size:.88rem}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap bar">
+<a class="logo" href="#top">ПОРТФОЛІО<span>★</span></a>
+<button id="burger" aria-label="Меню" aria-expanded="false">☰</button>
+<nav id="nav">
+<a href="#top">Головна</a>
+<a href="#portfolio">Портфоліо</a>
+<a href="#kopylka">Методична скарбничка</a>
+<a href="#uchnyam">Учням</a>
+<a href="#batkam">Батькам</a>
+<a href="#foto">Фотогалерея</a>
+<a href="#novyny">Новини</a>
+<a href="#kontakty">Контакти</a>
+</nav>
+</div>
+</header>
+
+<main id="top">
+<div class="hero">
+<div class="wrap">
+<div>
+<span class="tag">Вчитель початкових класів</span>
+<h1>Прізвище Ім’я По батькові</h1>
+<p>Ласкаво просимо на мій освітній сайт! Тут зібрано мої розробки, матеріали для учнів і батьків, а також яскраві моменти нашого шкільного життя.</p>
+<div class="btns">
+<a class="btn" href="#kopylka">Методичні матеріали</a>
+<a class="btn ghost" href="#kontakty">Зв’язатися</a>
+</div>
+</div>
+<div class="photo">🍎<small>Тут буде ваше фото</small></div>
+</div>
+</div>
+
+<section id="portfolio">
+<div class="wrap">
+<div class="title"><h2>Портфоліо</h2></div>
+<div class="about">
+<div class="card">
+<blockquote>«Навчаю з цікавістю, виховую з довірою».</blockquote>
+<p>Тут коротко розкажіть про себе: освіта, категорія, педагогічний стаж, курси підвищення кваліфікації, нагороди та досягнення.</p>
+<p><b>Педагогічне кредо:</b> місце для вашого кредо.</p>
+</div>
+<div class="card">
+<h3>Педагогічні цілі</h3>
+<ul>
+<li>стати для дітей другом і наставником;</li>
+<li>сприяти самореалізації кожної особистості;</li>
+<li>всебічно розвивати, навчати й виховувати;</li>
+<li>враховувати індивідуальні, вікові та психологічні особливості учнів.</li>
+</ul>
+</div>
+</div>
+<div class="stats">
+<div class="stat"><b>15</b><span>років досвіду</span></div>
+<div class="stat"><b>120+</b><span>розробок уроків</span></div>
+<div class="stat"><b>30+</b><span>позакласних заходів</span></div>
+<div class="stat"><b>4</b><span>випуски учнів</span></div>
+</div>
+</div>
+</section>
+
+<section id="kopylka" class="alt">
+<div class="wrap">
+<div class="title"><h2>Методична скарбничка</h2></div>
+<div class="grid">
+<a class="card tile" role="button" tabindex="0" data-k="programs"><span class="ico">🎓</span><h3>Робочі програми</h3><p>Програми з української мови, математики, «Я у світі» та інших предметів</p></a>
+<a class="card tile" role="button" tabindex="0" data-k="plans"><span class="ico">📝</span><h3>Календарно-тематичне планування</h3><p>Планування за предметами та семестрами</p></a>
+<a class="card tile" role="button" tabindex="0" data-k="lessons"><span class="ico">🔔</span><h3>Розробки уроків</h3><p>Конспекти, презентації та дидактичні матеріали</p></a>
+<a class="card tile" role="button" tabindex="0" data-k="events"><span class="ico">🎈</span><h3>Позакласні заходи</h3><p>Сценарії свят, виховних годин і екскурсій</p></a>
+</div>
+</div>
+</section>
+
+<section id="uchnyam">
+<div class="wrap">
+<div class="title"><h2>Учням</h2></div>
+<div class="grid">
+<a class="card tile" role="button" tabindex="0" data-k="homework"><span class="ico">📚</span><h3>Домашні завдання</h3><p>Нагадування та додаткові вправи</p></a>
+<a class="card tile" role="button" tabindex="0" data-k="games"><span class="ico">🧩</span><h3>Цікаві ігри та загадки</h3><p>Вчимося граючись</p></a>
+<a class="card tile" role="button" tabindex="0" data-k="contests"><span class="ico">🏆</span><h3>Конкурси та олімпіади</h3><p>Анонси та результати</p></a>
+<a class="card tile" role="button" tabindex="0" data-k="reading"><span class="ico">📖</span><h3>Читацький куточок</h3><p>Книжки, які варто прочитати</p></a>
+</div>
+</div>
+</section>
+
+<section id="batkam" class="alt">
+<div class="wrap" style="max-width:760px">
+<div class="title"><h2>Батькам</h2></div>
+<details open><summary>Як допомогти дитині з навчанням удома?</summary><p>Створіть спокійне місце для занять, дотримуйтесь режиму дня, хваліть за старання, а не лише за оцінки.</p></details>
+<details><summary>Розклад уроків і дзвінків</summary><p>Тут можна розмістити актуальний розклад або посилання на нього.</p></details>
+<details><summary>Батьківські збори та консультації</summary><p>Дати та теми найближчих зустрічей, а також час індивідуальних консультацій.</p></details>
+<details><summary>Що потрібно мати дитині в школі?</summary><p>Перелік шкільного приладдя, одягу для фізкультури та матеріалів для творчості.</p></details>
+</div>
+</section>
+
+<section id="foto">
+<div class="wrap">
+<div class="title"><h2>Фотогалерея</h2></div>
+<div class="gal">
+<div class="g">🦣<small>Екскурсія до музею</small></div>
+<div class="g">✏️<small>Наш клас</small></div>
+<div class="g">🎈<small>Перший дзвінок</small></div>
+<div class="g">💐<small>Свято 8 Березня</small></div>
+<div class="g">🔤<small>Прощавай, Букварю!</small></div>
+<div class="g">👑<small>Шкільний ранок</small></div>
+<div class="g">🎭<small>Театральний гурток</small></div>
+<div class="g">💃<small>Танцювальний конкурс</small></div>
+</div>
+<p style="text-align:center;color:var(--muted);font-size:.85rem;margin-top:16px">Замініть кольорові блоки власними фотографіями.</p>
+</div>
+</section>
+
+<section id="novyny" class="alt">
+<div class="wrap">
+<div class="title"><h2>Новини</h2></div>
+<div class="grid news">
+<a class="card tile" role="button" tabindex="0" data-n="0"><time>1 вересня</time><h3>Новий навчальний рік</h3><p>Привітання першокласників та початок нових відкриттів.</p><span class="more">Читати далі →</span></a>
+<a class="card tile" role="button" tabindex="0" data-n="1"><time>15 жовтня</time><h3>Осінній ярмарок</h3><p>Виставка саморобок та поробок з природних матеріалів.</p><span class="more">Читати далі →</span></a>
+<a class="card tile" role="button" tabindex="0" data-n="2"><time>20 грудня</time><h3>Новорічний ранок</h3><p>Святкова програма для учнів та їхніх батьків.</p><span class="more">Читати далі →</span></a>
+</div>
+</div>
+</section>
+
+<section id="kontakty">
+<div class="wrap">
+<div class="title"><h2>Контакти</h2></div>
+<div class="contact">
+<div class="card">
+<h3>Зворотний зв’язок</h3>
+<p>✉️ <a href="mailto:me@example.com.ua">me@example.com.ua</a></p>
+<p>Напишіть мені — з радістю відповім на ваші запитання щодо навчання, матеріалів та співпраці.</p>
+</div>
+<div class="card">
+<label for="n">Ім’я *</label><input id="n" autocomplete="name">
+<label for="e">Email *</label><input id="e" type="email" autocomplete="email">
+<label for="t">Тема</label><input id="t">
+<label for="m">Повідомлення *</label><textarea id="m"></textarea>
+<button class="btn" id="send" type="button">Надіслати</button>
+<p id="st" role="status"></p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>© 2026 Прізвище Ім’я По батькові · Вчитель початкових класів</footer>
+
+<div id="dlg" class="ov" hidden><div class="box" role="dialog" aria-modal="true" aria-labelledby="dt">
+<div class="mh"><h3 id="dt"></h3><button class="x" id="dx" type="button" aria-label="Закрити">✕</button></div>
+<div class="md"><p id="dd"></p><div id="dl"></div></div>
+</div></div>
+
+<script>
+var nav=document.getElementById('nav'),bg=document.getElementById('burger');
+bg.addEventListener('click',function(){var o=nav.classList.toggle('open');bg.setAttribute('aria-expanded',o)});
+nav.addEventListener('click',function(){nav.classList.remove('open');bg.setAttribute('aria-expanded',false)});
+document.getElementById('send').addEventListener('click',function(){
+var n=document.getElementById('n').value.trim(),e=document.getElementById('e').value.trim(),
+t=document.getElementById('t').value.trim(),m=document.getElementById('m').value.trim(),st=document.getElementById('st');
+if(!n||!e||!m){st.textContent='Будь ласка, заповніть усі поля, позначені зірочкою.';return}
+var body=m+'\n\n— '+n+' ('+e+')';
+window.location.href='mailto:me@example.com.ua?subject='+encodeURIComponent(t||'Повідомлення з сайту')+'&body='+encodeURIComponent(body);
+st.textContent='Відкриваємо вашу поштову програму…';
+});
+/* ====== МЕТОДИЧНА СКАРБНИЧКА ======
+   Щоб додати файл, допишіть рядок у потрібний розділ:
+   ['Назва файлу','тип','посилання для «Відкрити»','посилання для «Завантажити»']
+   Тип: docx, pdf, pptx або link (посилання на сайт). Якщо кнопка «Завантажити» не потрібна, залиште '' замість четвертого посилання. Поки стоїть '#', кнопка нічого не відкриває. */
+var K={
+programs:{t:'Робочі програми',d:'Оберіть документ, щоб відкрити або завантажити його.',f:[
+['Українська мова 1–4 клас','docx','#','#'],
+['Літературне читання 2–4 клас','docx','#','#'],
+['Математика 1–4 клас','docx','#','#'],
+['Основи здоров’я 1–4 клас','docx','#','#'],
+['Я у світі 3–4 клас','docx','#','#']]},
+plans:{t:'Календарно-тематичне планування',d:'Планування за предметами та семестрами.',f:[
+['Математика, 4 клас, 2 семестр','docx','#','#'],
+['Українська мова, 4 клас, 2 семестр','docx','#','#'],
+['Природознавство, 4 клас, 2 семестр','docx','#','#'],
+['Трудове навчання, 4 клас, 2 семестр','docx','#','#']]},
+lessons:{t:'Розробки уроків',d:'Конспекти уроків та презентації до них.',f:[
+['Конспект уроку з математики','docx','#','#'],
+['Презентація до уроку «Я у світі»','pptx','#','#'],
+['Дидактичні матеріали з української мови','pdf','#','#']]},
+homework:{t:'Домашні завдання',d:'Завдання для повторення та додаткові вправи.',f:[
+['Завдання на тиждень','pdf','#','#'],
+['Додаткові вправи з математики','pdf','#','#'],
+['Правила та таблиці для повторення','pdf','#','#']]},
+games:{t:'Цікаві ігри та загадки',d:'Вчимося граючись: ігри, загадки та кросворди.',f:[
+['Математичні ігри онлайн','link','#',''],
+['Загадки та ребуси','pdf','#','#'],
+['Кросворди з української мови','pdf','#','#']]},
+contests:{t:'Конкурси та олімпіади',d:'Анонси конкурсів і результати наших учнів.',f:[
+['Анонси конкурсів','docx','#','#'],
+['Результати олімпіад','docx','#','#'],
+['Грамоти та дипломи учнів','pdf','#','#']]},
+reading:{t:'Читацький куточок',d:'Книжки, які варто прочитати, та корисні матеріали.',f:[
+['Список літератури для літнього читання','pdf','#','#'],
+['Улюблені казки (онлайн-бібліотека)','link','#',''],
+['Читацький щоденник','docx','#','#']]},
+events:{t:'Позакласні заходи',d:'Сценарії свят, виховних годин та екскурсій.',f:[
+['Сценарій свята «Прощавай, Букварю!»','docx','#','#'],
+['Виховна година','pptx','#','#'],
+['Новорічний ранок','docx','#','#']]}
+};
+/* ====== НОВИНИ ======
+   d — дата, t — назва, e — емодзі на кольоровому банері (якщо немає фото),
+   img — шлях до картинки, напр. 'foto/yarmarok.jpg' (залиште '' — буде банер з емодзі),
+   p — абзаци тексту: кожен абзац в окремих лапках через кому. */
+var N=[
+{d:'1 вересня',t:'Новий навчальний рік',e:'🔔',img:'',p:['Тут розмістіть повний текст новини: як пройшла лінійка, кого привітали, які плани на новий навчальний рік.','Другий абзац: можна розповісти більше подробиць, подякувати батькам та учням.']},
+{d:'15 жовтня',t:'Осінній ярмарок',e:'🍁',img:'',p:['Опишіть, як минув осінній ярмарок: які роботи представили діти, хто взяв участь.','Додайте подяки та враження учасників.']},
+{d:'20 грудня',t:'Новорічний ранок',e:'🎄',img:'',p:['Розкажіть про святкову програму: вистави, пісні, конкурси та подарунки.','Не забудьте подякувати батькам за допомогу в організації свята.']}
+];
+var dlg=document.getElementById('dlg'),ICO={docx:'📄',pdf:'📕',pptx:'📊',link:'🔗'};
+function btn(txt,url,cls,dl){var a=document.createElement('a');a.textContent=txt;a.href=url;if(cls)a.className=cls;
+if(url==='#'){a.addEventListener('click',function(e){e.preventDefault()})}else{a.target='_blank';a.rel='noopener';if(dl)a.setAttribute('download','')}return a}
+function showK(k){var s=K[k],box=document.getElementById('dl');
+document.getElementById('dt').textContent=s.t;document.getElementById('dd').textContent=s.d;box.textContent='';
+s.f.forEach(function(r){var row=document.createElement('div');row.className='f';
+var i=document.createElement('span');i.className='fi';i.textContent=ICO[r[1]]||'📎';
+var n=document.createElement('span');n.className='fn';n.textContent=r[0];
+row.appendChild(i);row.appendChild(n);row.appendChild(btn('Відкрити',r[2],'',false));if(r[3])row.appendChild(btn('Завантажити',r[3],'dl',true));box.appendChild(row)});
+dlg.hidden=false;document.getElementById('dx').focus()}
+document.querySelectorAll('[data-k]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();showK(a.dataset.k)})});
+function showN(i){var s=N[i],box=document.getElementById('dl'),b;
+document.getElementById('dt').textContent=s.t;document.getElementById('dd').textContent=s.d;box.textContent='';
+if(s.img){b=document.createElement('img');b.src=s.img;b.alt=s.t}else{b=document.createElement('div');b.textContent=s.e||'📰'}
+b.className='ban';box.appendChild(b);
+var w=document.createElement('div');w.className='txt';
+s.p.forEach(function(x){var p=document.createElement('p');p.textContent=x;w.appendChild(p)});box.appendChild(w);
+dlg.hidden=false;document.getElementById('dx').focus()}
+document.querySelectorAll('[data-n]').forEach(function(a){a.addEventListener('click',function(){showN(a.dataset.n)});a.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();showN(a.dataset.n)}})});
+function closeK(){dlg.hidden=true}
+document.getElementById('dx').addEventListener('click',closeK);
+dlg.addEventListener('click',function(e){if(e.target===dlg)closeK()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeK()});
+document.querySelectorAll('[data-k]').forEach(function(a){a.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();showK(a.dataset.k)}})});
+</script>
+</body>
+</html>
